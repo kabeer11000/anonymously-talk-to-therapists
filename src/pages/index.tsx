@@ -44,10 +44,10 @@ export default function Home() {
                     className={"mr-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"}>Connect
                     with a therapist
                 </button>
-                <button
+                <a href={"https://ekqadamaur.kabeers.network"}
                     className={"bg-transparent hover:bg-green-500 text-green-700 font-semibold hover:text-white py-2 px-4 border border-green-500 hover:border-transparent rounded"}>About
                     EQA
-                </button>
+                </a>
             </div>
         </main>
     )
