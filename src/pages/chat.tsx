@@ -101,7 +101,7 @@ const App = () => {
                 // Turn your strings into dates, and then subtract them
                 // to get a value that is either negative, positive, or zero.
                 return new Date(a.createdAt) - new Date(b.createdAt);
-            })} userId={"user:1"} onSend={onSend}/>
+            })} userId={"user:" + id} onSend={onSend}/>
         </div>
     );
 }
