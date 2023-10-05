@@ -42,7 +42,7 @@ const App = () => {
         const messageId = ((messages?.length ?? 0) + 1).toString();
         const newMessage: ChatMessage = {
             messageId: `${messageId}`,
-            senderId: "therapist:" + localStorage.getItem("therapist_id"),
+            senderId: "therapist:1",
             profilePicture: "https://cdn.glitch.global/6a4b49bc-76eb-47e2-b7c9-e3b36ed788de/Logo.png?v=1655371433539",
             type: message.type,
             text: message.text,
@@ -58,7 +58,7 @@ const App = () => {
 
         // store user message in messages state and add "server" message
         // to simulate typing
-        await db.collection("conversations").doc(localStorage.getItem('user_id')).collection("messages").doc(messageId).set(newMessage);
+        await db.collection("conversations").doc(query.id?.toString()).collection("messages").doc(messageId).set(newMessage);
     };
 
     // adding chat component in full screen container
