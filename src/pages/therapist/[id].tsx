@@ -78,7 +78,7 @@ const App = () => {
             }}>
                 <button onClick={back} style={{marginRight: "1rem", borderRadius: 999}}><span
                     className="material-symbols-outlined">arrow_back</span></button>
-                <div><h4>EQA Chat</h4><small>All conversations are anonymous</small></div>
+                <div><h4>EQA Chat <span style={{marginLeft: "1rem", borderRadius: "5px", paddingLeft: "0.5rem", paddingRight: "0.5rem", background: "green", color: "white"}}>THERAPIST</span></h4><small>All conversations are anonymous</small></div>
             </div>
 
             {!messages.length && <div style={{opacity: 0.8, marginTop: "15rem", padding: "1.5rem", alignItems: "center", textAlign: "center", display: "flex", justifyContent: "center"}}>
