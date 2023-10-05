@@ -40,7 +40,7 @@ const testComponent: FunctionComponent<{ message: ChatMessage }> = () => {
 const App = () => {
     const {back} = useRouter();
     const [id, setId] = useState<undefined | string>();
-    const [messages]: [messages: Array<ChatMessage>] = useCollectionData(id ? db.collection("conversations").doc(id).collection("messages").orderBy("messageId", "asc") : null);
+    const [messages]: [messages: Array<ChatMessage>] = useCollectionData(id ? db.collection("conversations").doc(id).collection("messages") : null);
     useEffect(() => {
         setId(localStorage.getItem("user_id"))
     }, [])

@@ -34,7 +34,7 @@ const loadFile = (file: File): Promise<string> => {
 
 const App = () => {
     const {query, back} = useRouter();
-    const [messages]: [messages: Array<ChatMessage>] = useCollectionData(db.collection("conversations").doc(query.id?.toString()).collection("messages").orderBy("messageId", "asc"));
+    const [messages]: [messages: Array<ChatMessage>] = useCollectionData(db.collection("conversations").doc(query.id?.toString()).collection("messages"));
     if (!messages) return <div>Loading...</div>;
     const onSend = async (message: Message) => {
         // build new message received from chat component
