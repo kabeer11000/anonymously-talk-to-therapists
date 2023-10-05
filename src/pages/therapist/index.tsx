@@ -12,7 +12,7 @@ const App = () => {
         <div style={{width: "100%", height: "100%", padding: "2rem", overflow: "hidden"}}>
             <h1 className={"text-2xl"}>All Conversations:</h1>
             <ul>
-                {conversations.map(c => <li><a style={{color: "blue"}} href={`/therapist/${c.id}/`}>user c.id</a></li>)}
+                {conversations.map((c, i) => <li key={i}><a style={{color: "blue"}} href={`/therapist/${c.id}/`}>user c.id</a></li>)}
             </ul>
         </div>
     );
