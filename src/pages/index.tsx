@@ -37,7 +37,7 @@ export default function Home() {
                 <button
                     onClick={async () => {
                         if (!localStorage.getItem("user_id")) localStorage.setItem("user_id", v4());
-                        db.collection("conversations").doc(localStorage.getItem('user_id')).set({id: localStorage.getItem('user_id')}).then(() => {
+                        db.collection("conversations").doc(localStorage.getItem('user_id')).set({id: localStorage.getItem('user_id'), createdAt: new Date()}).then(() => {
                             router.push("/chat");
                         });
                     }}
