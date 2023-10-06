@@ -4,7 +4,7 @@ import {useCollectionData} from "react-firebase-hooks/firestore";
 import "firebase/firestore"
 
 const App = () => {
-    const [conversations, loading]: [conversations: Array<{id: string, ref: any}>] = useCollectionData(db.collection("conversations"));
+    const [conversations, loading]: [conversations: Array<{id: string, ref: any}>] = useCollectionData(db.collection("conversations").orderBy("createdAt", "desc");
     if (loading) return <div>Loading...</div>;
     if (conversations?.length === 0) return <div>No Conversations</div>;
     // adding chat component in full screen container
